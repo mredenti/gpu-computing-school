@@ -9,6 +9,10 @@ This repository hosts a collection of SYCL and KOKKOS exercises for the upcoming
     git clone https://gitlab.hpc.cineca.it/amasini0/gpu-computing-sycl-kokkos.git
     ```
 
+!!! success "Next"
+
+    Start exploring heterogeneous programming with either SYCL or KOKKOS, you choose!
+
 # SYCL
 
 | Name                                             | Description   |
