@@ -35,5 +35,5 @@ For the tutorial, we will compile our Kokkos programs via a Makefile while **bui
         but for the tutorial we will compile Kokkos programs inline via a Makefile
 
 !!! success "Next"
-    Great! We can now turn to running our first Kokkos program [Tutorial 01: Vector Addition](../vectorAdd/index.md)
+    Great! We can now turn to running our first Kokkos program [Tutorial 01: Vector Addition](./vectorAdd/index.md)
 

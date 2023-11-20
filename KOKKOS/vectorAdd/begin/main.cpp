@@ -31,30 +31,29 @@ int main(int argc, char *argv[])
     /* ------------------ Allocate a, b, c vectors on device (if GPU backend enabled) ----------------------*/
     typedef Kokkos::View<double *> ViewVectorType;
 
-    ViewVectorType a("a", N), b("b", N), c("c", N);
+
+    // @TASK@ Allocate one dimensional views views for a, b and c
 
 
-    /* ------------------ TASK: Create mirrors of the views on host. ----------------------*/
+    /* ------------------ @TASK@ Create mirrors of the views on host. ----------------------*/
 
-    ViewVectorType::HostMirror h_a = Kokkos::create_mirror_view(a);
-    ViewMatrixType::HostMirror h_b = Kokkos::create_mirror_view(b);
-    ViewVectorType::HostMirror h_c = Kokkos::create_mirror_view(c);
+    //ViewVectorType::HostMirror h_a = Kokkos::create_mirror_view(a);
+    //ViewMatrixType::HostMirror h_b = Kokkos::create_mirror_view(b);
+    //ViewVectorType::HostMirror h_c = Kokkos::create_mirror_view(c);
 
-    // Initialize a vector on host.
+    // @TASK@ Initialize a vector on host.
     for (int i = 0; i < h_a.extent(0); ++i)
     {
-      h_a(i) = 1;
+      a(i) = 1;
     }
 
-    // Initialize b vector on host.
+    // @TASK@ Initialize b vector on host.
     for (int i = 0; i < h_b.extent(0); ++i)
     {
-      h_b(i) = 1;
+      b(i) = 1;
     }
 
-    // Deep copy host views to device views.
-    Kokkos::deep_copy(a, h_a);
-    Kokkos::deep_copy(b, h_b);
+    // @TASK@ Deep copy host views to device views.
 
     // Timer products.
     Kokkos::Timer timer;
