@@ -1,0 +1,95 @@
+# Project Information
+site_name: Programming Heterogeneous Computing Systems
+site_description: Project documentation with Markdown. 
+site_author: Michael Redenti
+
+repo_url: https://github.com/mredenti/Kokkos
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.tabs.link
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+      primary: teal
+      accent: purple 
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
+      primary: teal
+      accent: lime
+  icon:
+    repo: fontawesome/brands/git-alt
+
+plugins:
+  - git-revision-date-localized:
+      type: date
+      enable_creation_date: true
+  - search
+
+nav:
+  - Home: index.md
+  - 'SYCL':
+    - 'Prerequisites 01: Templates/Template Metaprogramming': 'tutorials/vectorAdd/index.md'
+    - 'Prerequisites 02: Functors & Lambdas': 'tutorials/vectorAdd/index.md'
+    - 'Tutorial 01: vector addition': 'tutorials/vectorAdd/index.md'
+  - 'KOKKOS':
+    - 'Setup: Installing Kokkos and Tutorial Environment': 'tutorials/installation/index.md'
+    - 'Exercise 0: Vector Addition': 'tutorials/vectorAdd/index.md'
+    - 'Exercise 1: Matrix-Vector Multiplication': 'tutorials/matrixVector/index.md'
+    - 'Exercise 2: Matrix-Matrix Multiplication': 'tutorials/matrix/index.md'
+    - 'Porting Heat Conduction Mini-App to Kokkos': 'tutorials/heatMiniApp/index.md'
+
+markdown_extensions:
+  - markdown.extensions.extra
+  - toc:
+      permalink: true
+  - attr_list
+  - def_list
+  - tables
+  - pymdownx.highlight:
+      use_pygments: false
+  - pymdownx.snippets
+  - codehilite
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+copyright: |
+  &copy; 2023 <a href="https://github.com/mredenti"  target="_blank" rel="noopener">Michael Redenti</a>
