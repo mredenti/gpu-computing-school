@@ -1,10 +1,11 @@
 This guide will walk you through the process of compiling and running a vector addition program using Kokkos. 
 The program demonstrates basic usage of Kokkos for heterogeneous computing, including the use of different execution backends.
 
-**Navigate to the `vectorAdd` directory**
-```shell
-cd vectorAdd/begin
-```
+???+ note "Step 0: Navigate to the `vectorAdd` directory"
+
+    ```shell
+    cd vectorAdd/begin
+    ```
 
 ???+ note "Step 1: Complete vector addition program"
 
@@ -28,7 +29,11 @@ cd vectorAdd/begin
     make BACKEND=cuda
     ```
 
-???+ note "Step 3: Comparing performances"
+    ???+ question
+        
+        What do you note about the compilation?
+
+???+ tip "Step 3: Comparing performances"
 
     - Implement your own version of vector addition in CUDA (perhaps retrieve one from the exercises during the school)
     - Time the execution in a similar manner as for the Kokkos vector program and compare the execution times
