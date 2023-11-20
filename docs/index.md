@@ -15,7 +15,9 @@ This repository hosts a collection of Kokkos exercises for the upcoming School o
 
 ## Authors
 
-* **Michael Redenti** - *Initial work* 
+* **Michael Redenti** and **Alessandro Masini**  
+
+## Other contributors
 
 See also the list of [contributors](https://github.com/mredenti/gpu-computing-schoool/graphs/contributors) who participated in this project.
 
