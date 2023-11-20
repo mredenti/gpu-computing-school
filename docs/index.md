@@ -13,7 +13,7 @@ This repository hosts a collection of SYCL and KOKKOS exercises for the upcoming
 
 | Name                                             | Description   |
 |--------------------------------------------------|---------------|
-| [Exercises](../SYCL/index.md) | Instructions to compile and run the exercises on Leonardo 
+| [Exercises](../SYCL/index.md) | Instructions to compile and run the exercises on Leonardo |
 
 # Kokkos 
 
