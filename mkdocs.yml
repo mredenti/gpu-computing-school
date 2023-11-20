@@ -5,6 +5,7 @@ site_author: Michael Redenti
 
 repo_url: https://github.com/mredenti/Kokkos
 edit_uri: edit/main/docs/
+docs_dir: .
 
 theme:
   name: material
@@ -51,9 +52,9 @@ plugins:
   - search
 
 nav:
-  - Home: index.md
+  - Home: 'docs/index.md'
   - 'SYCL':
-    - 'Prerequisites 01: Templates/Template Metaprogramming': '../SYCL/index.md'
+    - 'Prerequisites 01: Templates/Template Metaprogramming': 'SYCL/index.md'
     - 'Prerequisites 02: Functors & Lambdas': '../SYCL/index.md'
     - 'Tutorial 01: vector addition': '../SYCL/index.md'
   - 'KOKKOS':
