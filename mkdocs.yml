@@ -60,11 +60,11 @@ nav:
     - 'Prerequisites 02: Functors & Lambdas': '../SYCL/index.md'
     - 'Tutorial 01: vector addition': '../SYCL/index.md'
   - 'KOKKOS':
-    - 'Setup: Installing Kokkos and Tutorial Environment': '../KOKKOS/index.md'
+    - 'Setup: Installing Kokkos and Tutorial Environment': 'KOKKOS/index.md'
     - 'Exercise 0: Vector Addition': '../KOKKOS/index.md'
-    - 'Exercise 1: Matrix-Vector Multiplication': '../KOKKOS/index.md'
-    - 'Exercise 2: Matrix-Matrix Multiplication': '../KOKKOS/index.md'
-    - 'Porting Heat Conduction Mini-App to Kokkos': '../KOKKOS/index.md'
+    - 'Exercise 1: Matrix-Vector Multiplication': 'KOKKOS/index.md'
+    - 'Exercise 2: Matrix-Matrix Multiplication': 'KOKKOS/index.md'
+    - 'Porting Heat Conduction Mini-App to Kokkos': 'KOKKOS/index.md'
 
 markdown_extensions:
   - markdown.extensions.extra
