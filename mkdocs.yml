@@ -53,17 +53,8 @@ plugins:
   - same-dir
 
 nav:
+  - 'index.md'
   - Home: index.md
-  - 'SYCL':
-    - 'Prerequisites 01: Templates/Template Metaprogramming': 'tutorials/vectorAdd/index.md'
-    - 'Prerequisites 02: Functors & Lambdas': 'tutorials/vectorAdd/index.md'
-    - 'Tutorial 01: vector addition': 'tutorials/vectorAdd/index.md'
-  - 'KOKKOS':
-    - 'Setup: Installing Kokkos and Tutorial Environment': 'tutorials/installation/index.md'
-    - 'Exercise 0: Vector Addition': 'tutorials/vectorAdd/index.md'
-    - 'Exercise 1: Matrix-Vector Multiplication': 'tutorials/matrixVector/index.md'
-    - 'Exercise 2: Matrix-Matrix Multiplication': 'tutorials/matrix/index.md'
-    - 'Porting Heat Conduction Mini-App to Kokkos': 'tutorials/heatMiniApp/index.md'
 
 markdown_extensions:
   - markdown.extensions.extra
