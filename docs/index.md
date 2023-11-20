@@ -2,6 +2,8 @@
 
 # Kokkos 
 
+git clone
+
 This repository hosts a collection of Kokkos exercises for the upcoming School on GPU Computing, organized by Cineca.
 
 | Name                                             | Description   | Level |
