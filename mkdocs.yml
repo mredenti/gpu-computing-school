@@ -5,7 +5,6 @@ site_author: Michael Redenti
 
 repo_url: https://github.com/mredenti/Kokkos
 edit_uri: edit/main/docs/
-docs_dir: KOKKOS/
 
 theme:
   name: material
@@ -53,8 +52,17 @@ plugins:
   - same-dir
 
 nav:
-  - 'index.md'
   - Home: index.md
+  - 'SYCL':
+    - 'Prerequisites 01: Templates/Template Metaprogramming': '../SYCL/index.md'
+    - 'Prerequisites 02: Functors & Lambdas': '../SYCL/index.md'
+    - 'Tutorial 01: vector addition': '../SYCL/index.md'
+  - 'KOKKOS':
+    - 'Setup: Installing Kokkos and Tutorial Environment': '../KOKKOS/index.md'
+    - 'Exercise 0: Vector Addition': '../KOKKOS/index.md'
+    - 'Exercise 1: Matrix-Vector Multiplication': '../KOKKOS/index.md'
+    - 'Exercise 2: Matrix-Matrix Multiplication': '../KOKKOS/index.md'
+    - 'Porting Heat Conduction Mini-App to Kokkos': '../KOKKOS/index.md'
 
 markdown_extensions:
   - markdown.extensions.extra
