@@ -4,7 +4,8 @@ site_description: Project documentation with Markdown.
 site_author: Michael Redenti
 
 repo_url: https://github.com/mredenti/Kokkos
-edit_uri: edit/main/KOKKOS/
+edit_uri: edit/main/docs/
+docs_dir: KOKKOS/
 
 theme:
   name: material
