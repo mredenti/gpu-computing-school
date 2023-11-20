@@ -49,7 +49,6 @@ plugins:
       type: date
       enable_creation_date: true
   - search
-  - same-dir
 
 nav:
   - Home: index.md
