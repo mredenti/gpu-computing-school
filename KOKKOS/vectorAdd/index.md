@@ -2,10 +2,9 @@ This guide will walk you through the process of compiling and running a vector a
 The program demonstrates basic usage of Kokkos for heterogeneous computing, including the use of different execution backends.
 
 **Navigate to the `vectorAdd` directory**
-
-    ```shell
-    cd vectorAdd/begin
-    ```
+```shell
+cd vectorAdd/begin
+```
 
 ???+ note "Step 1: Complete vector addition program"
 
