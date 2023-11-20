@@ -34,16 +34,6 @@ For the tutorial, we will compile our Kokkos programs via a Makefile while **bui
         [Building Kokkos via Spack package manager](https://kokkos.github.io/kokkos-core-wiki/building.html#:~:text=a%20single%20process.-,Spack,-%23)
         but for the tutorial we will compile Kokkos programs inline via a Makefile
 
-
-???+ note "Instructions: Cloning the tutorial/exercises repository"
-
-    No need as they are within the SYCL repository
-
-    **Change into your work area on Leonardo...**
-    ```shell
-    cd $WORK
-    ```
-
 !!! success "Next"
     Great! We can now turn to running our first Kokkos program [Tutorial 01: Vector Addition](../vectorAdd/index.md)
 
