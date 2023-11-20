@@ -4,7 +4,7 @@
 This repository hosts a collection of SYCL and KOKKOS exercises for the upcoming School on GPU Computing, organized by Cineca.
 You can clone the repository with the exercises by executing the following command 
 
-``` shell
+```shell
 git clone https://gitlab.hpc.cineca.it/amasini0/gpu-computing-sycl-kokkos.git
 ```
 
