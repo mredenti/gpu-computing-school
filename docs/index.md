@@ -1,5 +1,19 @@
 [![Github](https://img.shields.io/badge/sources-github-green.svg)](https://github.com/mredenti/gpu-computing-school/)
 
+
+This repository hosts a collection of SYCL and KOKKOS exercises for the upcoming School on GPU Computing, organized by Cineca.
+You can clone the repository with the exercises by executing the following command 
+
+``` shell
+git clone https://gitlab.hpc.cineca.it/amasini0/gpu-computing-sycl-kokkos.git
+```
+
+# SYCL
+
+| Name                                             | Description   |
+|--------------------------------------------------|---------------|
+| [Exercises](../SYCL/index.md) | Instructions to compile and run the exercises on Leonardo 
+
 # Kokkos 
 
 This repository hosts a collection of Kokkos exercises for the upcoming School on GPU Computing, organized by Cineca.
