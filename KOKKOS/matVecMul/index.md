@@ -39,7 +39,7 @@ More precisely, you will witness how performance varies with the shape of the ma
 
         What do you note about the execution time and/or the bandwidth?
 
-        ??? example " "
+        ???+ example "Task"
             Take a note of the bandwidths or the execution time. You will compare them to the ones obtained in the next exercise when you will re-write the Matrix Vector Multiplication kernel using team policies
 
 ??? success "Next"
