@@ -1,11 +1,5 @@
-This exercise asks you to investigate of the performance of matrix-vector multiplication
-$$
-    y = Ax, \text{where} A \in \mathbb{R}^{N \times M}
-$$
-
-
- More precisely, you will witness how performance varies with the shape of the matrix while keeping the overall size fixed.
-
+This exercise asks you to investigate of the performance of matrix-vector multiplication.
+More precisely, you will witness how performance varies with the shape of the matrix while keeping the overall size fixed.
 
 
 ???+ note "Step 0: Navigate to the `matVecMul` directory"
@@ -22,55 +16,32 @@ $$
 
     You can compile the program using the Makefile provided. 
 
-    ??? example "Serial compilation and execution"
-    
-        By default, the Makefile compiles for serial execution. To compile the program, simply run:
 
-        ```shell
-        make
-        ```
+    Compile with CUDA support
 
-        The compilation step should give you yield an executable named `vecAdd.serialx`
+    ```shell
+    make BACKEND=cuda
+    ```
 
-        To run the serial Kokkos version of the vector addition program launch an interactive session and run the program 
+    Launch an interactive session and run the matrix vector multiplication varying the number of rows N while keeping constant the size S of the matrix
 
-        ```shell
-        srun -N 1 --ntasks-per-node=1 --cpus-per-task=1 -p boost_usr_prod --gres=gpu:0 -A <your_project_name> --time=00:10:00 --pty /bin/bash
-        ./vecAdd.serialx
-        ```
+    ```shell
+    srun -N 1 --ntasks-per-node=1 --cpus-per-task=1 -p boost_usr_prod --gres=gpu:1 -A <your_project_name> --time=00:10:00 --pty /bin/bash
+    ```
+    ```shell
+    ./matVecMul.cudax -N 12
+    ```
+    ```shell
+    ./matVecMul.cudax -N 5
+    ```
 
-    ??? example "Cuda compilation and execution"
+    ???+ question
 
-        Kokkos supports various backends such as CUDA for GPUs. To compile the program for a specific backend, you can pass the BACKEND variable to Make. 
-        
-        For example, to compile with CUDA support, use:
+        What do you note about the execution time and/or the bandwidth?
 
-        ```shell
-        make BACKEND=cuda
-        ```
-
-        ???+ question
-
-            What do you note different about the compilation w.r.t. the serial compilation?
-
-        The compilation step should give you yield an executable named `vecAdd.cudax`
-
-        Launch an interactive session and run the program 
-
-        ```shell
-        srun -N 1 --ntasks-per-node=1 --cpus-per-task=1 -p boost_usr_prod --gres=gpu:1 -A <your_project_name> --time=00:10:00 --pty /bin/bash
-        ./vecAdd.cudax
-        ```
-
-
-??? tip "Optional: Comparing performances against Cuda/SYCL version"
-
-    - Implement your own version of vector addition in CUDA (perhaps retrieve one from the exercises during the school)
-    - Time the execution in a similar manner as for the Kokkos vector program and compare the execution times
-
-    **You may just compare performance to a SYCL version as well**
-
+        ??? example " "
+            Take a note of the bandwidths or the execution time. You will compare them to the ones obtained in the next exercise when you will re-write the Matrix Vector Multiplication kernel using team policies
 
 ??? success "Next"
     
-    Great! We can now turn to running our first Kokkos program [Tutorial 02: Matrix Vector Multiplication](./matVecMul/index.md)
+    Great! We can now turn to the next exercise [Tutorial 03: Matrix Vector Multiplication + Team Policy](./matVecMulTeamPolicy/index.md)
