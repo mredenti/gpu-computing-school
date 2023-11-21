@@ -56,9 +56,9 @@ plugins:
 nav:
   - Home: 'docs/index.md'
   - 'SYCL':
-    - 'Prerequisites 01: Templates/Template Metaprogramming': 'SYCL/index.md'
-    - 'Prerequisites 02: Functors & Lambdas': 'SYCL/index.md'
-    - 'Tutorial 01: vector addition': 'SYCL/index.md'
+    - 'Exercise 0: Name of exercise': 'SYCL/index.md'
+    - 'Exercise 1: Name of exercise': 'SYCL/index.md'
+    - 'Exercise 2: Name of exercise': 'SYCL/index.md'
   - 'KOKKOS':
     - 'Setup: Installing Kokkos and Tutorial Environment': 'KOKKOS/index.md'
     - 'Exercise 0: Vector Addition': 'KOKKOS/vectorAdd/index.md'
