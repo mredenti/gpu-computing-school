@@ -28,8 +28,8 @@ This repository hosts a collection of Kokkos exercises for the upcoming School o
 | [Setup: Installing Kokkos and Tutorial Environment](../KOKKOS/index.md) | This step guides you through cloning the Kokkos Core library and setting up the tutorial environment. | 
 | [Exercise 0: Vector Addition](../KOKKOS/vectorAdd/index.md) | Introduction to heterogeneous parallel programming | 
 | [Exercise 1: Matrix-Vector Multiplication](../KOKKOS/MatVecMul/index.md)   | Introduction to Kokkos parallel patterns | 
-| [Exercise 2: Matrix-Vector Multiplication With Teams](../KOKKOS/MatVecMulTeam/index.md)   | Introduction to Kokkos parallel patterns | 
-| [Exercise 3: Matrix-Matrix Multiplication](../KOKKOS/MatVecMulTeam/index.md)   | Introduction to Kokkos parallel patterns | 
+| [Exercise 2: Matrix-Vector Multiplication With Teams](../KOKKOS/MatVecMulTeamPolicy/index.md)   | Introduction to Kokkos parallel patterns | 
+| [Exercise 3: Matrix-Matrix Multiplication](../KOKKOS/MatMul/index.md)   | Introduction to Kokkos parallel patterns | 
 | [Porting Heat Conduction Mini-App to Kokkos](../KOKKOS/MatMul/index.md)  | Put your Kokkos skills to the test by porting a mini-application simulating heat conduction. Give a description of the mini-app | 
 
 ## Authors
