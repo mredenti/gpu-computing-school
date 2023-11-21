@@ -44,4 +44,4 @@ More precisely, you will witness how performance varies with the shape of the ma
 
 ??? success "Next"
     
-    Great! We can now turn to the next exercise [Tutorial 03: Matrix Vector Multiplication + Team Policy](./matVecMulTeamPolicy/index.md)
+    Great! We can now turn to the next exercise [Tutorial 03: Matrix Vector Multiplication + Team Policy](../matVecMulTeamPolicy/index.md)

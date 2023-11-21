@@ -66,4 +66,4 @@ The program demonstrates basic usage of Kokkos for heterogeneous computing, incl
 
 ??? success "Next"
     
-    Great! We can now turn to our next exercise [Tutorial 02: Matrix Vector Multiplication](./matVecMul/index.md)
+    Great! We can now turn to our next exercise [Tutorial 02: Matrix Vector Multiplication](../matVecMul/index.md)
