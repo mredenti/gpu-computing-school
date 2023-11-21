@@ -15,7 +15,7 @@ The program demonstrates basic usage of Kokkos for heterogeneous computing, incl
 
     You can compile the program using the Makefile provided. 
 
-    ???+ example "Serial compilation and execution"
+    ??? example "Serial compilation and execution"
     
         By default, the Makefile compiles for serial execution. To compile the program, simply run:
 
