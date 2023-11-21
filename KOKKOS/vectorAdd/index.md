@@ -4,7 +4,7 @@ The program demonstrates basic usage of Kokkos for heterogeneous computing, incl
 ???+ note "Step 0: Navigate to the `vectorAdd` directory"
 
     ```shell
-    gpu-computing-sycl-kokkos/KOKKOS/vectorAdd/begin
+    cd gpu-computing-sycl-kokkos/KOKKOS/vectorAdd/begin
     ```
 
 ???+ note "Step 1: Complete vector addition program"
