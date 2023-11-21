@@ -23,10 +23,6 @@ The program demonstrates basic usage of Kokkos for heterogeneous computing, incl
         make
         ```
 
-        ???+ question
-
-            What is the compiler being used?
-
         The compilation step should give you yield an executable named `vecAdd.serialx`
 
         To run the serial Kokkos version of the vector addition program launch an interactive session and run the program 
@@ -48,7 +44,7 @@ The program demonstrates basic usage of Kokkos for heterogeneous computing, incl
 
         ???+ question
 
-            What is the compiler being used?
+            What do you note different about the compilation w.r.t. the serial compilation?
 
         The compilation step should give you yield an executable named `vecAdd.cudax`
 
