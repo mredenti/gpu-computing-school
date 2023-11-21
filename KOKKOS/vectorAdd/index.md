@@ -10,7 +10,6 @@ The program demonstrates basic usage of Kokkos for heterogeneous computing, incl
 ???+ note "Step 1: Complete the vector addition program"
 
     The program is partially implemented, and you will need to complete the sections marked with `@TASK@`.
-    These comments indicate parts of the code that you need to implement. 
 
 ???+ note "Step 2: Compile and Run"
 
