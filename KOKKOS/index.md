@@ -41,9 +41,9 @@ For the tutorial, we will compile our Kokkos programs via a Makefile while **bui
     
     ???+ tip "Clone repository with SYCL and KOKKOS exercises"
     
-    ```shell
-    git clone https://gitlab.hpc.cineca.it/amasini0/gpu-computing-sycl-kokkos.git
-    ```
+        ```shell
+        git clone https://gitlab.hpc.cineca.it/amasini0/gpu-computing-sycl-kokkos.git
+        ```
     
     Great! We can now turn to running our first Kokkos program [Tutorial 01: Vector Addition](./vectorAdd/index.md)
 
