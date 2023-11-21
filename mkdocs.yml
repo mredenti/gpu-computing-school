@@ -63,7 +63,7 @@ nav:
     - 'Setup: Installing Kokkos and Tutorial Environment': 'KOKKOS/index.md'
     - 'Exercise 0: Vector Addition': 'KOKKOS/vectorAdd/index.md'
     - 'Exercise 1: Matrix-Vector Multiplication': 'KOKKOS/matVecMul/index.md'
-    - 'Exercise 2: Matrix-Matrix Multiplication': 'KOKKOS/matVecMulTeamPolicy/index.md'
+    - 'Exercise 2: Matrix-Matrix Multiplication + Team Policy': 'KOKKOS/matVecMulTeamPolicy/index.md'
 
 markdown_extensions:
   - markdown.extensions.extra
