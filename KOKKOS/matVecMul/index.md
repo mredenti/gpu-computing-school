@@ -1,17 +1,24 @@
-This guide will walk you through the process of compiling and running a vector addition program using Kokkos. 
-The program demonstrates basic usage of Kokkos for heterogeneous computing, including the use of different execution backends.
+This exercise asks you to investigate of the performance of matrix-vector multiplication
+$$
+    y = Ax, \text{where} A \in \mathbb{R}^{N \times M}
+$$
 
-???+ note "Step 0: Navigate to the `vectorAdd` directory"
+
+ More precisely, you will witness how performance varies with the shape of the matrix while keeping the overall size fixed.
+
+
+
+???+ note "Step 0: Navigate to the `matVecMul` directory"
 
     ```shell
-    cd gpu-computing-sycl-kokkos/KOKKOS/vectorAdd/begin
+    cd gpu-computing-sycl-kokkos/KOKKOS/matVecMul/begin
     ```
 
-???+ note "Step 1: Complete the vector addition program"
+???+ note "Step 1: Complete the matrix vector multiplication program"
 
     The program is partially implemented, and you will need to complete the sections marked with `@TASK@`.
 
-???+ note "Step 2: Compile and Run"
+???+ note "Step 2: Investigate the performance as you vary the shape of the matrix"
 
     You can compile the program using the Makefile provided. 
 
