@@ -41,7 +41,3 @@ More precisely, you will witness how performance varies with the shape of the ma
 
         ???+ example "Task"
             Take a note of the bandwidths or the execution time. You will compare them to the ones obtained in the next exercise when you will re-write the Matrix Vector Multiplication kernel using team policies
-
-??? success "Next"
-    
-    Great! We can now turn to the next exercise [Tutorial 03: Matrix Vector Multiplication + Team Policy](../matVecMulTeamPolicy/index.md)
