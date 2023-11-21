@@ -34,6 +34,16 @@ For the tutorial, we will compile our Kokkos programs via a Makefile while **bui
         [Building Kokkos via Spack package manager](https://kokkos.github.io/kokkos-core-wiki/building.html#:~:text=a%20single%20process.-,Spack,-%23)
         but for the tutorial we will compile Kokkos programs inline via a Makefile
 
+
 !!! success "Next"
+    
+    Unless you have already done so 
+    
+    ???+ tip "Clone repository with SYCL and KOKKOS exercises"
+    
+    ```shell
+    git clone https://gitlab.hpc.cineca.it/amasini0/gpu-computing-sycl-kokkos.git
+    ```
+    
     Great! We can now turn to running our first Kokkos program [Tutorial 01: Vector Addition](./vectorAdd/index.md)
 
