@@ -37,7 +37,7 @@ The program demonstrates basic usage of Kokkos for heterogeneous computing, incl
         ./vecAdd.serialx
         ```
 
-    ???+ example "Cuda compilation and execution"
+    ??? example "Cuda compilation and execution"
 
         Kokkos supports various backends such as CUDA for GPUs. To compile the program for a specific backend, you can pass the BACKEND variable to Make. 
         
@@ -61,7 +61,7 @@ The program demonstrates basic usage of Kokkos for heterogeneous computing, incl
         ```
 
 
-???+ tip "Step 4: Comparing performances"
+??? tip "Optional: Comparing performances against Cuda/SYCL version"
 
     - Implement your own version of vector addition in CUDA (perhaps retrieve one from the exercises during the school)
     - Time the execution in a similar manner as for the Kokkos vector program and compare the execution times
@@ -69,7 +69,7 @@ The program demonstrates basic usage of Kokkos for heterogeneous computing, incl
     **You may just compare performance to a SYCL version as well**
 
 
-!!! success "Next"
+??? success "Next"
     
     Great! We can now turn to running our first Kokkos program [Tutorial 01: Vector Addition](./vectorAdd/index.md)
     put a link to matrix vector addition, try different N,K values and make them write a version with TeamPolicy 
