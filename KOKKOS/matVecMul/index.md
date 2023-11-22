@@ -26,7 +26,7 @@ More precisely, you will witness how performance varies with the shape of the ma
     Launch an interactive session and run the matrix vector multiplication varying the number of rows N while keeping constant the size S of the matrix
 
     ```shell
-    srun -N 1 --ntasks-per-node=1 --cpus-per-task=1 -p boost_usr_prod --gres=gpu:1 -A <your_project_name> --time=00:10:00 --pty /bin/bash
+    srun -X -t 10 -N 1 -n 1 --mem=8GB --gres=gpu:1 -p boost_usr_prod -A tra23_advgpu --reservation s_tra_advgpu --qos=qos_lowprio --pty /usr/bin/bash
     ```
     ```shell
     ./matVecMul.cudax -N 12

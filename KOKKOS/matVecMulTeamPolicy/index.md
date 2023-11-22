@@ -22,7 +22,7 @@ This exercise asks you to improve the performance of the matrix-vector multiplic
     Launch an interactive session and run with the same parameters as before
 
     ```shell
-    srun -N 1 --ntasks-per-node=1 --cpus-per-task=1 -p boost_usr_prod --gres=gpu:1 -A <your_project_name> --time=00:10:00 --pty /bin/bash
+    srun -X -t 10 -N 1 -n 1 --mem=8GB --gres=gpu:1 -p boost_usr_prod -A tra23_advgpu --reservation s_tra_advgpu --qos=qos_lowprio --pty /usr/bin/bash
     ```
     ```shell
     ./matVecMulTeamPolicy.cudax -N 12
