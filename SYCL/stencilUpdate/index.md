@@ -1,7 +1,8 @@
 # 2D Stencil Heat Map Update
-In this exercise we will write a simple code that computes a stencil update to a 2D heat map. There is an heat source placed at `( SIZE/4, SIZE/4)`, where `SIZE` is the dimension of the domain we are considering (the number sf stencil locations per side, assuming a square stencil).
+In this exercise you will write a simple code that computes a stencil update to a 2D heat map. There is a source placed at `( SIZE/4, SIZE/4)`, where `SIZE` is the dimension of the stencil we are considering (i.e. the number of stencil nodes per side, assuming a square stencil).
 
 The update conditions are as follows:
+
 - if we are at the source, i.e. `x,y = source_x, source_y` the value of the heat map is unchanged
 - in any other point `(i,j)` it should be updated as follows:
 ```
@@ -13,10 +14,7 @@ if (i==0)      map[i-1,j] => map[i,j]
 if (i==SIZE-1) map[i+1,j] => map[i,j]
 ```
 
-The file `exercise/stencilUpdate.cpp` contains a partially compiled template for the exercise. You only need to fill the code for the kernel function, and the code to call it from host. The spots that have to be filled are marked with a `//TODO` comment.
-
-The templated code already sets up the memory on host and device, and performs the memory tranfers. Furthermore, it checks the result at the end, to ensure that the final results are consistent. The result of the check, together with some execution metrics are printed in the program output.
-
+The file `exercise/stencilUpdate.cpp` contains a partially compiled template for the exercise. You only need to fill the code for the kernel function, and the code to call it from host. The spots that have to be filled are marked with a `//TODO` comment. The templated code already sets up the memory on host and device, and performs the memory tranfers. Furthermore, it checks the result at the end, to ensure that the final results are consistent. The result of the check, together with some execution metrics are printed in the program output.
 ## Compiling
 In order to compile the exercise it is sufficient to run the following commands inside the exercise directory
 ```shell
@@ -26,7 +24,6 @@ make
 # compile for GPU
 make BACKEND=cuda-leo
 ```
-
 ## Running
 In order to run the exercise on Leonardo using GPUs you need to request a GPU node
 ```shell
@@ -39,11 +36,10 @@ The CPU version can be run on the login node, but the `SIZE` must be set to ad a
 # recompiling
 ./stencilUpdate_sycl_cpu
 ```
-
 ## Compiling and running the solution
 The folder `solution` contains a solution to the exercise. The commands for compiling and running are the same, except that they must be run in the `solution` folder.
 
-There is also a CUDA version of the solution, that can be compiled and run as follows
+There is also a CUDA version of the solution that can be compiled and run as follows
 ```shell
 # compile CUDA version
 make TARGET=cuda
