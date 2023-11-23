@@ -17,7 +17,11 @@ This repository hosts a collection of SYCL and KOKKOS exercises for the upcoming
 
 | Name                                             | Description   |
 |--------------------------------------------------|---------------|
-| [Exercises](../SYCL/index.md) | Instructions to compile and run the exercises on Leonardo |
+| [Setup: Getting SYCL and Tutorial Environment](../SYCL/index.md) | Info on how to get a SYCL compiler, and what we can use on Leonardo |
+| [Exercise 1: 2D Heat Map Stencil Update](../SYCL/stencilUpdate/index.md) | Implementing a stencil update for a 2D heat map using SYCL |
+| [Exercise 2: Global Matrix Multiplication](../SYCL/globalMatMul/index.md) | Implementing global matrix multiplication using SYCL |
+| [Example: Tiled Matrix Multiplication](../SYCL/tiledMatMul/index.md) | Example implementation of a tiled matrix multiplication algorithm |
+| [Example: Parallel Prefix Sum](../SYCL/prefixSum/index.md) | Example implementation of a parallel prefix sum algorithm |
 
 # Kokkos 
 
