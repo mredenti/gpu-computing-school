@@ -56,9 +56,11 @@ plugins:
 nav:
   - Home: 'docs/index.md'
   - 'SYCL':
-    - 'Exercise 0: Name of exercise': 'SYCL/index.md'
-    - 'Exercise 1: Name of exercise': 'SYCL/index.md'
-    - 'Exercise 2: Name of exercise': 'SYCL/index.md'
+    - 'Setup': 'SYCL/index.md' 
+    - 'Exercise 1: 2D Stencil Heat Map': 'SYCL/stencilUpdate/index.md'
+    - 'Exercise 2: Global Matrix Multiplication': 'SYCL/globalMatMul/index.md'
+    - 'Exercise 3: Tiled Matrix Multiplication': 'SYCL/tiledMatMul/index.md'
+    - 'Exercise 4: GPU Prefix Sum': 'SYCL/prefixSum/index.md'
   - 'KOKKOS':
     - 'Setup: Installing Kokkos and Tutorial Environment': 'KOKKOS/index.md'
     - 'Exercise 0: Vector Addition': 'KOKKOS/vectorAdd/index.md'
