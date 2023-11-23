@@ -36,8 +36,8 @@ If you want to try to implement your own version of this example, in the `extras
 # create a folder in the directory SYCL
 mkdir customKernel
 
-# copy the makefile from any of the other examples
-cp globalMatMul/Makefile customKernel/Makefile
+# copy the makefile from the ooriginal example
+cp tiledMatMul/Makefile customKernel/Makefile
 
 # copy the template
 cp extras/template.cpp custoKernel/customKernel.cpp
