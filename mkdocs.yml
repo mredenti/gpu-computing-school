@@ -56,7 +56,7 @@ plugins:
 nav:
   - Home: 'docs/index.md'
   - 'SYCL':
-    - 'Setup': 'SYCL/index.md' 
+    - 'Setup: Installing SYCL and Tutorial Environment': 'SYCL/index.md' 
     - 'Exercise 1: 2D Stencil Heat Map': 'SYCL/stencilUpdate/index.md'
     - 'Exercise 2: Global Matrix Multiplication': 'SYCL/globalMatMul/index.md'
     - 'Exercise 3: Tiled Matrix Multiplication': 'SYCL/tiledMatMul/index.md'
