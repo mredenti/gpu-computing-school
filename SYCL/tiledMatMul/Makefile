@@ -1,20 +1,17 @@
 include ../Makefile.in
 
 ifeq ($(TARGET), cuda)
-	SRC = $(shell find . -type f -name *.cu)
-	EXE = $(subst .cu,,$(SRC))_cuda
+	FILEXT = .cu
+	SUFFIX = $(TARGET)
 else 
-	SRC = $(shell find . -type f -name *.cpp)
-	_EXE = $(subst .cpp,,$(SRC))
-	
-	ifeq ($(BACKEND), cpu)
-		EXE = $(_EXE)_sycl_cpu
-	else
-		EXE = $(_EXE)_sycl_gpu
-	endif
-
+	FILEXT = .cpp
+	SUFFIX = $(TARGET)_$(BACKEND)
 endif
 
+# targets
+SRC = $(shell find . -type f -name *$(FILEXT))
+EXE = $(subst $(FILEXT),,$(SRC))_$(SUFFIX)
+	
 $(EXE): $(SRC)
 	@echo -n "building $@ ..."
 	@$(CXX) $< -o $@ $(CXX_FLAGS) -I ../utils
@@ -23,4 +20,3 @@ $(EXE): $(SRC)
 .PHONY: clean
 clean:
 	rm -f $(subst .cpp,,$(SRC))_*
-

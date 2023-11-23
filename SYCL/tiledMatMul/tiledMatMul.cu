@@ -71,7 +71,7 @@ __global__ void matmulOptGPU(const float* A, const float* B, float* C)
 
 int main() {
 
-    constexpr size_t nelems = SIZE * SIZE;
+    constexpr size_t nelems{ SIZE * SIZE };
 
     // define thread block size and grid
     const dim3 grid{ SIZE / (TILE*VECT), SIZE / TILE };
