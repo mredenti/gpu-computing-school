@@ -1,0 +1,30 @@
+# Set flags if not set from command line
+TARGET ?= sycl
+BACKEND ?= cpu
+
+# Compiler configuration for CUDA files
+ifeq ($(TARGET), cuda)
+	CXX = nvc++
+	CXX_FLAGS = -O3 -mp
+
+# Compiler configuration for SYCL .cpp files    
+else 
+	CXX = icpx # by default uses -O2 -ffast-math
+	CXX_FLAGS = -O3 -fiopenmp -fsycl
+
+	# Specific CUDA backend flags for Leonardo's GPUs
+	ifeq ($(BACKEND), cuda-leo)
+		CXX_FLAGS += -fsycl-targets=nvptx64-nvidia-cuda 
+		CXX_FLAGS += -Xsycl-target-backend=nvptx64-nvidia-cuda --cuda-gpu-arch=sm_80 # set CUDA architecture for Leonardo's GPUs
+		CXX_FLAGS += --cuda-path=${CUDA_ROOT} # set non-standard cuda intall dir
+
+	# Generic CUDA backend flags
+	else ifeq ($(BACKEND), cuda)
+		CXX_FLAGS += -fsycl-targets=nvptx64-nvidia-cuda # generic cuda backend
+	
+	# Generic CPU backend flags
+	else
+		# CXX_FLAGS += -fsycl-targets=x86_64
+
+	endif # on $(BACKEND)
+endif # on $(TARGET)
