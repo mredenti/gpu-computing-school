@@ -95,7 +95,7 @@ int main(int argc, char *argv[])
     ViewMatrixType A("A", N, M);
     ViewVectorType x("x", M);
 
-    /* ------------------ TASK: Create mirrors of the views on host. ----------------------*/
+    /* ------------------ Create mirrors of the views on host. ----------------------*/
 
     ViewVectorType::HostMirror h_y = Kokkos::create_mirror_view(y);
     ViewMatrixType::HostMirror h_A = Kokkos::create_mirror_view(A);
@@ -123,6 +123,8 @@ int main(int argc, char *argv[])
     // Timer products.
     Kokkos::Timer timer;
 
+    /* ------------------ @TASK@ Re-write the matrix vector multiplication program using hierarchical parallelism ----------------------*/
+
     for (int repeat = 0; repeat < nrepeat; repeat++)
     {
 
@@ -139,6 +141,8 @@ int main(int argc, char *argv[])
             y(i) = sum;
           });
     }
+
+    /* ------------------ End of TASK ----------------------*/
 
     // syncrhonize
     Kokkos::fence();

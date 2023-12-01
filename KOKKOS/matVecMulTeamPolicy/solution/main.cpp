@@ -89,7 +89,7 @@ int main(int argc, char *argv[])
 
     /* ------------------ Allocate y, x vectors and Matrix A on device. ----------------------*/
     typedef Kokkos::View<double *> ViewVectorType;
-    typedef Kokkos::View<double **> ViewMatrixType;
+    typedef Kokkos::View<double **, Kokkos::LayoutRight> ViewMatrixType;
 
     ViewVectorType y("y", N);
     ViewMatrixType A("A", N, M);
@@ -123,20 +123,30 @@ int main(int argc, char *argv[])
     // Timer products.
     Kokkos::Timer timer;
 
+    using team_t = typename Kokkos::TeamPolicy<>::member_type;
+
     for (int repeat = 0; repeat < nrepeat; repeat++)
     {
 
       Kokkos::parallel_for(
-          "y=Ax", N, KOKKOS_LAMBDA(const int i) {
+          "y=Ax", Kokkos::TeamPolicy<>(y.extent(0), Kokkos::AUTO),
+          KOKKOS_LAMBDA(const team_t &team_h) {
             
+            int row = team_h.league_rank();
             double sum = 0;
 
-            for (int j = 0; j < M; j++)
-            {
-              sum += A(i, j) * x(j);
-            }
+            Kokkos::parallel_reduce(
+                Kokkos::TeamThreadRange(team_h, A.extent(1)),
+                [&](const int col, double &partial_sum)
+                {
+                  partial_sum += A(row, col) * x(col);
+                },
+                sum);
 
-            y(i) = sum;
+            if (team_h.team_rank() == 0)
+            {
+              y(row) = sum;
+            }
           });
     }
 
