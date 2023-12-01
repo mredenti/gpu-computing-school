@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
   
   int nrepeat = 100; // number of repeats of the test
-  int N = argc > 1 ? std::atoi(argv[1]) : pow(2, 12); // Set N to argument value or 10 if no argument
+  int N = argc > 1 ? std::atoi(argv[1]) : pow(2, 12);
 
   std::cout << "Value of N is: " << N << std::endl;
   
@@ -37,21 +37,21 @@ int main(int argc, char *argv[])
     /* ------------------ TASK: Create mirrors of the views on host. ----------------------*/
 
     ViewVectorType::HostMirror h_a = Kokkos::create_mirror_view(a);
-    ViewMatrixType::HostMirror h_b = Kokkos::create_mirror_view(b);
+    ViewVectorType::HostMirror h_b = Kokkos::create_mirror_view(b);
     ViewVectorType::HostMirror h_c = Kokkos::create_mirror_view(c);
 
-    // Initialize a vector on host.
+    // Initialize vector a on host.
     for (int i = 0; i < h_a.extent(0); ++i)
     {
       h_a(i) = 1;
     }
 
-    // Initialize b vector on host.
+    // Initialize vector b on host.
     for (int i = 0; i < h_b.extent(0); ++i)
     {
       h_b(i) = 1;
     }
-
+    
     // Deep copy host views to device views.
     Kokkos::deep_copy(a, h_a);
     Kokkos::deep_copy(b, h_b);
@@ -78,16 +78,17 @@ int main(int argc, char *argv[])
 
     /* ------------ Verify results ----------------*/
 
-    const double solution = (double)N;
+    const double solution = 2 * (double)N;
     double result = 0;
-
+    
+  
     Kokkos::parallel_reduce(
         "sum(c)", N, KOKKOS_LAMBDA(const int i, double &partial_sum) {
           partial_sum += c(i);
         },
         result);
 
-    // synchronize 
+    // synchronize  
     Kokkos::fence();
 
     if (result != solution)
@@ -95,9 +96,7 @@ int main(int argc, char *argv[])
       printf("  Error: result( %lf ) != solution( %lf )\n", result, solution);
     }
 
-    /* ------------ Print Avg Time ----------------*/
-
-    // Print results (problem size, time and bandwidth in GB/s).
+    // Print avg time
     printf("Avg time( %g s )\n", time/nrepeat);
   }
   Kokkos::finalize();

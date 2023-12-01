@@ -3,7 +3,7 @@ include ../../Makefile.inc
 default: build
 	echo "Start Build"
 
-EXE = matVecMul.${BACKEND}x
+EXE = vecAdd.${BACKEND}x
 
 CXXFLAGS = -O2 -g
 
