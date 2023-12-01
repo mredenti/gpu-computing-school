@@ -6,7 +6,7 @@ This repository hosts a collection of SYCL and KOKKOS exercises for the upcoming
 ???+ tip "Clone repository with SYCL and KOKKOS exercises"
     
     ```shell
-    git clone https://gitlab.hpc.cineca.it/amasini0/gpu-computing-sycl-kokkos.git
+    git clone https://github.com/mredenti/gpu-computing-school.git
     ```
 
 !!! success "Next"
